@@ -10,31 +10,11 @@
     </head>
     <body> 
         <div>
-            <button type="button" onclick="insertBark();sendEmail();">BARKING</button>
+            <button type="button" onclick="insertBark();">BARKING</button>
         </div>
         <div>
             <button type="button" onclick="insertMovement();">MOVING</button>
         </div>
-        <form action="" method="post">
-            <input type="submit" value="Send details to embassy" />
-            <input type="hidden" name="button_pressed" value="1" />
-        </form>
-
-        <?php
-
-            if(isset($_POST['button_pressed']))
-            {
-                $to      = 'marialuzarenasalonso@gmail.com';
-                $subject = 'the subject';
-                $message = 'hello';
-                $headers = "From: Name <marialuzarenasalonso@gmail.com>\r\n" . "X-Mailer: php";
-
-                mail($to, $subject, $message, $headers);
-
-                echo 'Email Sent.';
-            }
-
-        ?>
         <input type="button" value="Open Dialog" onClick="openAndroidDialog()" />
 
         <script type="text/javascript">

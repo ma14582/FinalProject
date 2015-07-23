@@ -63,12 +63,20 @@ function getToday() {
 // Getting the time 
 function getTime() {
     var today = new Date();
-    var hour = today.getHours();
-    var minute = today.getMinutes();
-    var second = today.getSeconds();
-    return today = hour + ':' + minute + ':' + second;
+    var hh = today.getHours();
+    var mm = today.getMinutes();
+    var ss = today.getSeconds();
+    if (hh < 10) {
+       hh = '0' + hh;
+    }
+    if (mm < 10) {
+       mm = '0' + mm;
+    }
+    if (ss < 10) {
+       ss = '0' + ss;
+    }
+    return today = hh + ':' + mm + ':' + ss;
 }
-
 
 /*
  ===============================================
@@ -203,12 +211,3 @@ function getYPixel(val) {
     return graph.height() - (((graph.height() - yPadding) / getMaxY(data)) * val) - yPadding;
 }
 
-/*
- ===============================================
- INSERTEVENT
- ===============================================
- */
-
- function sendEmail(){
-    
- }
