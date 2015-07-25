@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Movement</title>
+        <link rel="stylesheet" href="style/main.css" type="text/css"/>
+        <script src="javascript/jquery/jquery.js"></script>
+        <script src="javascript/test.js"></script>
+    </head>
+    <body onload="callAndroid('getMovement');">
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="getEvent.html">All Events</a></li>
+                    <li><a href="getBark.html">Barking</a></li>
+                    <li><a href="getMovement.html">Movement</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <img class="icon" src="pictures/Cooper.png" alt="cooper"/>
+            <h4><a href="index.html">Cooper</a></h4>
+        </div>
+        <div id="eventList"></div>
+        <canvas id="graph" width="350" height="250"></canvas>
+    </body>
+</html>
