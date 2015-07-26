@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width; user-scalable=0;"/>
+        <title>My HTML</title>
+    </head>
+
+    <body>
+        <h1>MyHTML</h1>
+
+        <div id="messages">
+
+        </div>
+        <input id="barkButton" type="button" onclick="jsToNative('BARK')" value = "bark"/>
+        <input id="movkButton" type="button" onclick="jsToNative('MOV')" value = "mov"/>
+        <script>
+            function nativeToJS(m) {
+                var messages = document.getElementById("messages");
+                var message = document.createElement("message");
+                message.text = m;
+                messages.appendChild(message);
+            }
+
+            var sendDataFromJS = JSInterface.jsToNative(messageType);
+            alert(sendDataFromJS);
+
+        </script>
+    </body>
+
+</html>
