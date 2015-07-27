@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Bark</title>
+        <link rel="stylesheet" href="style/main.css" type="text/css"/>
+        <script src="javascript/jquery/jquery.js"></script>
+        <script src="javascript/serviceclient.js"></script>
+        <script src="javascript/main.js"></script>    
+    </head>
+    <body> 
+        <div>
+            <button type="button" onclick="insertBark();">BARKING</button>
+        </div>
+        <div>
+            <button type="button" onclick="insertMovement();">MOVING</button>
+        </div>
+        <input type="button" value="Open Dialog" onClick="openAndroidDialog()" />
+
+        <script type="text/javascript">
+            function openAndroidDialog() {
+                AndroidFunction.openAndroidDialog();
+            }
+        </script>
+        <div id="eventList"></div>
+
+    </body>
+</html>
